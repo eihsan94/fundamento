@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { classNames } from "../../../utils/style.utils";
 import { Logo } from "../logo";
+import { APP_CONFIGS } from "../../../configs";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -37,6 +38,9 @@ export function SidebarMenu({
       )}>
       <div className="flex h-16 shrink-0 items-center">
         <Logo />
+        <div className="ml-3 text-xl leading-7 text-gray-900 font-semibold">
+          {APP_CONFIGS.appName}
+        </div>
       </div>
       <nav className="flex flex-1 flex-col">
         <ul className="flex flex-1 flex-col gap-y-7">
